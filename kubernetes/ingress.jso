@@ -1,0 +1,7 @@
+{
+    "ingress" :{
+        "prefix": "ingress",
+        "description": "Simple ingress template",
+        "body": "apiVersion: extensions/v1beta1\nkind: Ingress\nmetadata:\n  name: ${name:Enter ingress name}\n  annotations:\n    ingress.kubernetes.io/rewrite-target: \"/\"\n    ingress.kubernetes.io/ssl-redirect: \"false\"\nspec:\n  rules:\n   - host: \"url add\"\n     http:\n      paths:\n      - path: /\n        backend:\n          serviceName:\n          servicePort:\n"
+    }
+}
